@@ -1,0 +1,41 @@
+CpanelBundle\Entity\User:
+    type: entity
+    table: users
+    repositoryClass: CpanelBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstName:
+            type: string
+            length: 100
+            nullable: true
+        lastName:
+            type: string
+            length: '100'
+            nullable: true
+        docType:
+            type: integer
+            nullable: true
+        docNumber:
+            type: string
+            length: '30'
+            nullable: true
+        phone:
+            type: string
+            length: '50'
+            nullable: true
+        address:
+            type: string
+            length: 255
+            nullable: true
+        createdAt:
+            type: datetime
+            nullable: true
+        updatedAt:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }
